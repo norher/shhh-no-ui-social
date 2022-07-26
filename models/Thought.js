@@ -1,4 +1,4 @@
-const { Schema, Model } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const dayJs = require('dayjs');
 var advancedFormat = require('dayjs/plugin/advancedFormat');
 dayJs.extend(advancedFormat);
@@ -31,6 +31,6 @@ thoughtSchema.virtual("reactionCount").get(function () {
     return this.reactions.length;
 });
 
-const Thought = Model('thought', thoughtSchema);
+const Thought = model('thought', thoughtSchema);
 
-module.exports = Thought
+module.exports = Thought;
