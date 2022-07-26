@@ -1,5 +1,6 @@
 const { User, Reaction, Thought } = require('../models');
 
+// Functions to export
 module.exports = {
     getThoughts(req, res) {
         Thought.find()
